@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Louvre Size Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <label for="flowrate">Flowrate (in litres per second):</label>
+        <input type="number" id="flowrate">
+
+        <label for="velocity" class="tooltip">Louvre velocity (in m/s):
+            <span class="tooltiptext">louvres are usually sized for 2 m/s or 2.5 m/s for best performance and lowest noise</span>
+        </label>
+        <input type="number" id="velocity">
+
+        <label for="freearea">Free area (in %):</label>
+        <input type="number" id="freearea" min="0" max="100">
+
+        <button onclick="calculateArea()">Calculate</button>
+
+        <label for="height">Height (in mm):</label>
+        <input type="number" id="height" oninput="adjustWidth()">
+
+        <label for="width">Width (in mm):</label>
+        <input type="number" id="width" oninput="adjustHeight()">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
